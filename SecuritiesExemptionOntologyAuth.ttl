@@ -104,6 +104,13 @@
                      rdfs:label "Blank Check Company"@en ;
                      <http://www.w3.org/2004/02/skos/core#definition> "A Blank Check Company is a specialized type of Company that lacks a specific business plan or identified acquisition target, often formed for future mergers or acquisitions."@en .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Blank_Check_Company ;
+   owl:annotatedProperty :authoratative_def ;
+   owl:annotatedTarget "Any development stage company issuing a penny stock (as defined in Section 3(a)(51) of the Securities Exchange Act of 1934) that either lacks a specific business plan or indicates its business plan is to merge with an unidentified company or companies." ;
+   rdfs:isDefinedBy "Securities Act of 1933"
+ ] .
+
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Business_Development_Company
 :Business_Development_Company rdf:type owl:Class ;
@@ -323,6 +330,13 @@
           rdfs:label "Security"@en ;
           <http://www.w3.org/2004/02/skos/core#definition> "In finance, a security is a tradable financial instrument that represents an ownership interest, creditor relationship, or rights to potential future value, such as stocks, bonds, or derivatives."@en .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Security ;
+   owl:annotatedProperty :authoratative_def ;
+   owl:annotatedTarget "Any note, stock, treasury stock, security future, security‑based swap, bond, debenture, evidence of indebtedness, certificate of interest or participation in a profit‑sharing agreement, collateral‑trust certificate, preorganization certificate or subscription, transferable share, investment contract, voting‑trust certificate, certificate of deposit for a security, fractional undivided interest in oil, gas, or other mineral rights, any put, call, straddle, option, or privilege on a security (including on a certificate of deposit or a group/index of securities), or any similar instrument commonly known as a “security.”" ;
+   rdfs:isDefinedBy "Securities Act of 1933"
+ ] .
+
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Solicitation
 :Solicitation rdf:type owl:Class ;
@@ -391,6 +405,13 @@
                                                               rdfs:label "Accredited Investor"@en ;
                                                               <http://www.w3.org/2004/02/skos/core#definition> "Individuals or entities that meet certain requirements set by regulatory authorities, such as a specific net worth or income level."@en .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://folio.openlegalstandard.org/RCwEVoFW90PLN1eL6JToOMt> ;
+   owl:annotatedProperty :authoratative_def ;
+   owl:annotatedTarget "(i) Certain financial institutions (banks, insurance companies, investment companies, employee benefit plans under specific conditions) and (ii) any person who meets prescribed criteria regarding financial sophistication, net worth, knowledge, or assets under management, as defined by Commission rules." ;
+   rdfs:isDefinedBy "Securities Act of 1933"
+ ] .
+
 
 ###  https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg
 <https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> rdf:type owl:Class ;
@@ -398,6 +419,13 @@
                                                               :authoratative_def "Every person who issues or proposes to issue any security. (With specific exceptions for certain certificates and interests defined by reference to the entity performing the issuing acts.)" ;
                                                               rdfs:label "Issuer"@en ;
                                                               <http://www.w3.org/2004/02/skos/core#definition> "An issuer is a legal entity that develops, registers and sells securities to finance its operations. Issuers may be corporations, investment trusts, or domestic or foreign governments."@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> ;
+   owl:annotatedProperty :authoratative_def ;
+   owl:annotatedTarget "Every person who issues or proposes to issue any security. (With specific exceptions for certain certificates and interests defined by reference to the entity performing the issuing acts.)" ;
+   rdfs:isDefinedBy "Securities Act of 1933"
+ ] .
 
 
 ###  https://folio.openlegalstandard.org/RDdgYa5ZbqVnS9aGrOwQu5h
