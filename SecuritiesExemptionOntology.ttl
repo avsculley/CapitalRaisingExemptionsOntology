@@ -1,0 +1,408 @@
+@prefix : <http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/> .
+
+<http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/backedBy
+:backedBy rdf:type owl:ObjectProperty ;
+          rdfs:label "backed by"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "x backed by y means x is supported, secured, or guaranteed by y, meaning that the value, performance, or repayment of x is underpinned by y."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/partOf
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:label "part of"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/raisedBy
+:raisedBy rdf:type owl:ObjectProperty ;
+          rdfs:label "raised by"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "x raised by y means x is some resource, y is some agent, and x has been generated, collected, or acquired through the fundraising or financing efforts of y."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Agent
+<http://www.ontologyrepository.com/CommonCoreOntologies/Agent> rdf:type owl:Class ;
+                                                               rdfs:label "Agent"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "A material entity that is capable of performing planned acts."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113#12-Month_Time_Period
+<http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113#12-Month_Time_Period> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf :Time_Period ;
+                                                                                                      rdfs:label "12-Month Time Period"@en ;
+                                                                                                      <http://www.w3.org/2004/02/skos/core#definition> "A continuous span of 12 consecutive months used as a standard benchmark for assessing performance or compliance."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113#90-Day_Time_Period
+<http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113#90-Day_Time_Period> rdf:type owl:Class ;
+                                                                                                    rdfs:subClassOf :Time_Period ;
+                                                                                                    rdfs:label "90-Day Time Period"@en ;
+                                                                                                    <http://www.w3.org/2004/02/skos/core#definition> "A continuous span of 90 consecutive days used as a standard benchmark for assessing performance or compliance."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Annual_Income
+:Annual_Income rdf:type owl:Class ;
+               rdfs:label "Annual Income"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Annual income is the total amount of money earned or received by an individual or entity over the course of a year, typically including wages, salaries, bonuses, dividends, and other sources of revenue before taxes."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Asset
+:Asset rdf:type owl:Class ;
+       rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000740> ;
+       rdfs:label "Asset"@en ;
+       <http://www.w3.org/2004/02/skos/core#definition> "An Asset is a Resource that has economic value and is expected to generate future financial benefits."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Bad_Actor
+:Bad_Actor rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
+           rdfs:label "Bad Actor"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A Bad Actor is a person or entity disqualified from certain securities exemptions due to specified regulatory, criminal, or civil violations."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Blank_Check_Company
+:Blank_Check_Company rdf:type owl:Class ;
+                     rdfs:subClassOf <https://folio.openlegalstandard.org/RDdgYa5ZbqVnS9aGrOwQu5h> ;
+                     rdfs:label "Blank Check Company"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "A Blank Check Company is a specialized type of Company that lacks a specific business plan or identified acquisition target, often formed for future mergers or acquisitions."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Business_Development_Company
+:Business_Development_Company rdf:type owl:Class ;
+                              rdfs:subClassOf :Registered_Investment_Company ;
+                              rdfs:label "Business Development Company"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "A Business Development Company is a Registered Investment Company that invests in or assists small, developing, or financially distressed businesses under the 1940 Act."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Canadian_Issuer
+:Canadian_Issuer rdf:type owl:Class ;
+                 rdfs:subClassOf :Non-U.S._Issuer ;
+                 rdfs:label "Canadian Issuer"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A Canadian Issuer is a non-U.S. Issuer that is incorporated or based in Canada."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Capital-Raising_Limit
+:Capital-Raising_Limit rdf:type owl:Class ;
+                       rdfs:label "Capital-Raising Limit"@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "A regulatory or contractual restriction on the total amount of capital that an issuer is permitted to raise within a defined time period, typically under a specific securities exemption or offering type."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Communicative_Process
+:Communicative_Process rdf:type owl:Class ;
+                       rdfs:subClassOf :Process ;
+                       rdfs:label "Act of Communication"@en ;
+                       <http://www.w3.org/2004/02/skos/core#altLabel> "Communicative Process"@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act in which some information is transferred from some Agent to Another."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Disclosure_Document
+:Disclosure_Document rdf:type owl:Class ;
+                     rdfs:subClassOf :Document ;
+                     rdfs:label "Disclosure Document"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "A document provided by an issuer in connection with a securities offering that contains material information about the offering, the issuer, the risks involved, and other factors necessary to enable investors to make informed investment decisions."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Document
+:Document rdf:type owl:Class ;
+          rdfs:label "Document"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A document is any written, printed, or electronically stored record that provides evidence or information about an event, transaction, or communication."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Exchange_Act_Reporting_Company
+:Exchange_Act_Reporting_Company rdf:type owl:Class ;
+                                rdfs:subClassOf <https://folio.openlegalstandard.org/RDdgYa5ZbqVnS9aGrOwQu5h> ;
+                                rdfs:label "Exchange Act Reporting Company"@en ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "An Exchange Act Reporting Company is a Company that is registered under the Securities Exchange Act of 1934 and files periodic reports with the SEC."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Federal_Limit
+:Federal_Limit rdf:type owl:Class ;
+               rdfs:subClassOf :Offering_Limit ;
+               rdfs:label "Federal Offering Limit"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "An offering limit that is established by federal securities law or regulation, specifying the maximum amount of capital an issuer may raise under a particular exemption or registration category."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Form_C
+:Form_C rdf:type owl:Class ;
+        rdfs:subClassOf :Disclosure_Document ;
+        rdfs:label "Form C"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Form C is the disclosure document that an issuer must file with the SEC when conducting a securities offering under Regulation Crowdfunding, detailing the company’s business, financial condition, offering specifics, and intended use of proceeds to inform potential investors."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/General_Solicitation
+:General_Solicitation rdf:type owl:Class ;
+                      rdfs:subClassOf :Solicitation ;
+                      rdfs:label "General Solicitation"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "A General Solicitation is a type of Solicitation that targets the public broadly, using mass communication channels such as advertising or open-access media."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/In-State_Resident
+:In-State_Resident rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
+                   rdfs:label "In-State Resident"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "An In-state Resident is a person or organization that is legally domiciled or primarily located in a particular state, often relevant for intrastate offerings."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Internet_Platform
+:Internet_Platform rdf:type owl:Class ;
+                   rdfs:label "Internet Platform"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "An internet platform is a digital ecosystem or service accessible online that enables users to interact, exchange information, and conduct transactions through provided tools and applications."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Investment_Company
+:Investment_Company rdf:type owl:Class ;
+                    rdfs:subClassOf <https://folio.openlegalstandard.org/RDdgYa5ZbqVnS9aGrOwQu5h> ;
+                    rdfs:label "Investment Company"@en ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "An Investment Company is a Company whose principal activity involves investing, holding, or trading securities (commonly under the Investment Company Act of 1940)."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Investment_Limit
+:Investment_Limit rdf:type owl:Class ;
+                  rdfs:subClassOf :Capital-Raising_Limit ;
+                  rdfs:label "Investment Limit"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "A capital-raising limit that applies specifically to the amount of capital that a single investor is permitted to contribute to an offering, typically based on that investor’s income, net worth, or other eligibility criteria."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Net_Worth
+:Net_Worth rdf:type owl:Class ;
+           rdfs:label "Net Worth"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Net worth is defined as the total value of an individual’s or entity’s assets minus their total liabilities, representing their overall financial position or wealth."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Non-Accredited_Investor
+:Non-Accredited_Investor rdf:type owl:Class ;
+                         rdfs:subClassOf <https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> ;
+                         rdfs:label "Non-Accredited Investor"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "A Non-Accredited Investor is an Investor that does not meet any of the criteria defining an accredited investor."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Non-U.S._Issuer
+:Non-U.S._Issuer rdf:type owl:Class ;
+                 rdfs:subClassOf <https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> ;
+                 rdfs:label "Non-U.S. Issuer"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A non-U.S. Issuer is an Issuer that is organized or primarily based outside the United States."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Offeree
+:Offeree rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
+         rdfs:label "Offeree"@en ;
+         <http://www.w3.org/2004/02/skos/core#definition> "An Offeree is a prospective investor to whom an Issuer extends an offer to purchase securities."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Offering_Limit
+:Offering_Limit rdf:type owl:Class ;
+                rdfs:subClassOf :Capital-Raising_Limit ;
+                rdfs:label "Offering Limit"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An Offering Limit is a regulatory cap on the total amount of capital that can be raised under a particular exemption within a specified timeframe."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Process
+:Process rdf:type owl:Class ;
+         rdfs:label "Process"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "Event"@en ;
+         <http://www.w3.org/2004/02/skos/core#definition> "A process is a thing that happens."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Process_of_Issuing_Securities
+:Process_of_Issuing_Securities rdf:type owl:Class ;
+                               rdfs:subClassOf :Process ;
+                               rdfs:label "Process of Issuing Securities"@en ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "The process of issuing securities is the series of coordinated steps an entity takes to create, register, and offer its financial instruments—such as stocks or bonds—to investors, including planning, preparing documentation, meeting regulatory requirements, and marketing and distributing the securities."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Process_of_Testing_the_Waters
+:Process_of_Testing_the_Waters rdf:type owl:Class ;
+                               rdfs:subClassOf :Communicative_Process ;
+                               rdfs:label "Process of Testing the Waters"@en ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "Testing the Waters is a preliminary communicative process in which an Issuer engages potential investors before formally committing to an offering."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Process_of_Transaction
+:Process_of_Transaction rdf:type owl:Class ;
+                        rdfs:subClassOf :Process ;
+                        rdfs:label "Process of Transaction"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "A transaction is an exchange of value between parties—such as the buying, selling, or transferring of goods, services, or financial instruments—often formalized through an agreement or record."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Qualification
+:Qualification rdf:type owl:Class ;
+               rdfs:subClassOf :Process ;
+               rdfs:label "Process of Qualificaiton"@en ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "Qualification"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Qualification is a regulatory approval process in which a securities authority declares that an offering document meets the necessary legal requirements to proceed."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Raised_Capital
+:Raised_Capital rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://folio.openlegalstandard.org/RxkTKgYqWS0WBHnJgrn27Y>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :raisedBy ;
+                                                             owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/Agent>
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://folio.openlegalstandard.org/RxkTKgYqWS0WBHnJgrn27Y> ;
+                rdfs:label "Raised Capital"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Raised capital is the funds a company secures by issuing legally sanctioned financial instruments (securities) to external investors, which then become part of its capital for operations and growth."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Registered_Intermediary
+:Registered_Intermediary rdf:type owl:Class ;
+                         rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
+                         rdfs:label "Registered Intermediary"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "A registered intermediary is an individual or firm that has been formally registered with a regulatory authority to act as a trusted agent between parties—such as issuers and investors—in financial transactions, ensuring compliance with applicable laws and regulations."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Registered_Investment_Company
+:Registered_Investment_Company rdf:type owl:Class ;
+                               rdfs:subClassOf :Investment_Company ;
+                               rdfs:label "Registered Investment Company"@en ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "A Registered Investment Company is an Investment Company that has formally registered under the Investment Company Act of 1940, subjecting it to additional regulations."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Security
+:Security rdf:type owl:Class ;
+          rdfs:subClassOf <https://folio.openlegalstandard.org/RxkTKgYqWS0WBHnJgrn27Y> ;
+          rdfs:label "Security"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "In finance, a security is a tradable financial instrument that represents an ownership interest, creditor relationship, or rights to potential future value, such as stocks, bonds, or derivatives."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Solicitation
+:Solicitation rdf:type owl:Class ;
+              rdfs:subClassOf :Communicative_Process ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :partOf ;
+                                owl:someValuesFrom :Process_of_Issuing_Securities
+                              ] ;
+              rdfs:label "Solicitation"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "A Solicitation is a communicative process in which an Issuer (or agent thereof) seeks to attract potential investors to purchase securities."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Sophisticated_Investor
+:Sophisticated_Investor rdf:type owl:Class ;
+                        rdfs:subClassOf <https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> ;
+                        rdfs:label "Sophisticated Investor"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "A Sophisticated Investor is an Investor possessing sufficient knowledge and experience to evaluate the risks and merits of an offering, but may not meet accredited thresholds."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/State_Limit
+:State_Limit rdf:type owl:Class ;
+             rdfs:subClassOf :Offering_Limit ;
+             rdfs:label "State Offering Limit"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "An offering limit that is imposed by the securities laws or regulations of an individual U.S. state, restricting the maximum amount of capital an issuer may raise within that state under a specific exemption or offering type."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Time_Period
+:Time_Period rdf:type owl:Class ;
+             rdfs:label "Time Period"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A defined interval during which a particular event occurs."@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/U.S._Issuer
+:U.S._Issuer rdf:type owl:Class ;
+             rdfs:subClassOf <https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> ;
+             rdfs:label "U.S. Issuer"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A U.S. Issuer is an Issuer that is organized or maintains its principal place of business in the United States."@en .
+
+
+###  https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H
+<https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
+                                                              rdfs:label "Investor"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "An investor is a person, company or entity that qualifies under the Securities Act of 1933 and related Securities and Exchange Commission regulations as one having sufficient knowledge and expertise in financial matters to weigh the value and risks of an investment."@en .
+
+
+###  https://folio.openlegalstandard.org/RBGd796pNg5ltGWhkyk2ifm
+<https://folio.openlegalstandard.org/RBGd796pNg5ltGWhkyk2ifm> rdf:type owl:Class ;
+                                                              owl:equivalentClass [ owl:intersectionOf ( :Security
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty :backedBy ;
+                                                                                                           owl:someValuesFrom :Asset
+                                                                                                         ]
+                                                                                                       ) ;
+                                                                                    rdf:type owl:Class
+                                                                                  ] ;
+                                                              rdfs:subClassOf :Security ;
+                                                              rdfs:label "Asset-Backed Security"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Asset-Backed Securities (ABS) are financial instruments backed by a pool of assets, typically loans or receivables, that generate cash flows to pay interest and principal to investors. ABS allow lenders to transfer the risk of the underlying assets to investors and are commonly used to improve liquidity and raise capital."@en .
+
+
+###  https://folio.openlegalstandard.org/RCwEVoFW90PLN1eL6JToOMt
+<https://folio.openlegalstandard.org/RCwEVoFW90PLN1eL6JToOMt> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> ;
+                                                              rdfs:label "Accredited Investor"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Individuals or entities that meet certain requirements set by regulatory authorities, such as a specific net worth or income level."@en .
+
+
+###  https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg
+<https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
+                                                              rdfs:label "Issuer"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "An issuer is a legal entity that develops, registers and sells securities to finance its operations. Issuers may be corporations, investment trusts, or domestic or foreign governments."@en .
+
+
+###  https://folio.openlegalstandard.org/RDdgYa5ZbqVnS9aGrOwQu5h
+<https://folio.openlegalstandard.org/RDdgYa5ZbqVnS9aGrOwQu5h> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
+                                                              rdfs:label "Corporation"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#altLabel> "Company"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "An organization formed with state governmental approval to act as an artificial person that is empowered with legal rights usually only reserved for individuals, such as to sue and be sued, issue shares of stock to raise funds (unless it is non-profit), own property, hire employees or loan and borrow money."@en .
+
+
+###  https://folio.openlegalstandard.org/RFLCbWnBgkHxPAEeVWloyg
+<https://folio.openlegalstandard.org/RFLCbWnBgkHxPAEeVWloyg> rdf:type owl:Class ;
+                                                             rdfs:subClassOf :Process ;
+                                                             rdfs:label "Filing Event"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "A Filing is a legal event that initiates a lawsuit or other legal action, such as the submission of a document to a court or administrative agency."@en .
+
+
+###  https://folio.openlegalstandard.org/RmqysGFQ1RYW3F9lv5u3hu
+<https://folio.openlegalstandard.org/RmqysGFQ1RYW3F9lv5u3hu> rdf:type owl:Class ;
+                                                             rdfs:subClassOf :Document ;
+                                                             rdfs:label "Offering Document"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#altLabel> "Offering Statement"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "An Offering Document is a comprehensive legal document provided by a company or financial entity to potential investors, detailing the terms, conditions, and risks of the investment offering. This document, often used in private placements and public offerings, includes key information such as the company's business model, financial statements, management background, and details of the security being offered."@en .
+
+
+###  https://folio.openlegalstandard.org/RxkTKgYqWS0WBHnJgrn27Y
+<https://folio.openlegalstandard.org/RxkTKgYqWS0WBHnJgrn27Y> rdf:type owl:Class ;
+                                                             rdfs:subClassOf :Asset ;
+                                                             rdfs:label "Financial Asset"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#altLabel> "Capital Resource"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "Financial Assets are economic resources that have value and can be owned or controlled with the expectation of generating future income or financial benefits. They can exist in various forms such as cash, stocks, bonds, and real estate."@en .
+
+
+###  https://www.commoncoreontologies.org/ont00000740
+<https://www.commoncoreontologies.org/ont00000740> rdf:type owl:Class ;
+                                                   rdfs:label "Resource"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Continuant that is owned by, in the possession of, or is otherwise controlled by an Agent such that it could be used by that Agent."@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
