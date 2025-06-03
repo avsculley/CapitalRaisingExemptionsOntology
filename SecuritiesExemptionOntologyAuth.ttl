@@ -12,8 +12,12 @@
 #    Annotation properties
 #################################################################
 
-###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113#authoratative_def
+###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/authoratative_def
 :authoratative_def rdf:type owl:AnnotationProperty .
+
+
+###  http://www.sks.ai/ont/sourceOfAuthoratativeDefinition
+<http://www.sks.ai/ont/sourceOfAuthoratativeDefinition> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -374,6 +378,54 @@
              rdfs:subClassOf <https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> ;
              rdfs:label "U.S. Issuer"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "A U.S. Issuer is an Issuer that is organized or maintains its principal place of business in the United States."@en .
+
+
+###  http://www.sks.ai/ont/FormD
+<http://www.sks.ai/ont/FormD> rdf:type owl:Class ;
+                              rdfs:subClassOf :Document ;
+                              rdfs:label "Form D"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "A brief notice that companies must file with the SEC after they sell securities without registration under Regulation D, containing key details about the offering and issuer."@en .
+
+
+###  http://www.sks.ai/ont/In-StateBusniessActivity
+<http://www.sks.ai/ont/In-StateBusniessActivity> rdf:type owl:Class ;
+                                                 rdfs:subClassOf :Process ;
+                                                 :authoratative_def "The issuer shall be deemed to be doing business within a state or territory if the issuer satisfies at least one of the following requirements: (i) The issuer derived at least 80% of its consolidated gross revenues from the operation of a business or of real property located in or from the rendering of services within such state or territory; Instruction to paragraph (c)(2)(i):  Revenues must be calculated based on the issuer's most recent fiscal year, if the first offer of securities pursuant to this section is made during the first six months of the issuer's current fiscal year, and based on the first six months of the issuer's current fiscal year or during the twelve-month fiscal period ending with such six-month period, if the first offer of securities pursuant to this section is made during the last six months of the issuer's current fiscal year. (ii) The issuer had at the end of its most recent semi-annual fiscal period prior to an initial offer of securities in any offering or subsequent offering pursuant to this section, at least 80% of its assets and those of its subsidiaries on a consolidated basis located within such state or territory; (iii) The issuer intends to use and uses at least 80% of the net proceeds to the issuer from sales made pursuant to this section (§ 230.147) in connection with the operation of a business or of real property, the purchase of real property located in, or the rendering of services within such state or territory; or (iv) A majority of the issuer's employees are based in such state or territory."@en ;
+                                                 <http://www.sks.ai/ont/sourceOfAuthoratativeDefinition> "17 C.F.R. § 230.147(c)" ;
+                                                 rdfs:label "In-State Busniess Activity"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "Doing Business"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "For purposes of intrastate offering exemptions, doing business typically includes having a principal office and a majority of employees or assets in the same state, or conducting a significant portion of revenue-generating activity there."@en .
+
+
+###  http://www.sks.ai/ont/NationalSecuritiesExchange
+<http://www.sks.ai/ont/NationalSecuritiesExchange> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.sks.ai/ont/SecuritiesExchange> ;
+                                                   rdfs:label "National Securities Exchange"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A securities exchange registered with the SEC under Section 6 of the Securities Exchange Act of 1934, including NYSE, NASDAQ, and others, subject to federal regulatory oversight."@en .
+
+
+###  http://www.sks.ai/ont/RestrictedSecurity
+<http://www.sks.ai/ont/RestrictedSecurity> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Security ;
+                                           :authoratative_def "The term restricted securities means: (i) Securities acquired directly or indirectly from the issuer, or from an affiliate of the issuer, in a transaction or chain of transactions not involving any public offering; (ii) Securities acquired from the issuer that are subject to the resale limitations of § 230.502(d) under Regulation D or § 230.701(c); (iii) Securities acquired in a transaction or chain of transactions meeting the requirements of § 230.144A; (iv) Securities acquired from the issuer in a transaction subject to the conditions of Regulation CE (§ 230.1001); (v) Equity securities of domestic issuers acquired in a transaction or chain of transactions subject to the conditions of § 230.901 or § 230.903 under Regulation S (§ 230.901 through § 230.905, and Preliminary Notes); (vi) Securities acquired in a transaction made under § 230.801 to the same extent and proportion that the securities held by the security holder of the class with respect to which the rights offering was made were, as of the record date for the rights offering, “restricted securities” within the meaning of this paragraph (a)(3); (vii) Securities acquired in a transaction made under § 230.802 to the same extent and proportion that the securities that were tendered or exchanged in the exchange offer or business combination were “restricted securities” within the meaning of this paragraph (a)(3); and (viii) Securities acquired from the issuer in a transaction subject to an exemption under section 4(5) (15 U.S.C. 77d(5)) of the Act."@en ;
+                                           <http://www.sks.ai/ont/sourceOfAuthoratativeDefinition> "17 C.F.R. § 230.144(a)(3)" ;
+                                           rdfs:label "Restricted Security"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A security acquired in an unregistered, private sale from the issuing company or from an affiliate, subject to resale restrictions under Rule 144 of the Securities Act of 1933."@en .
+
+
+###  http://www.sks.ai/ont/Section12jOrder
+<http://www.sks.ai/ont/Section12jOrder> rdf:type owl:Class ;
+                                        rdfs:label "Section 12(j) Order"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "An SEC order issued under Section 12(j) of the Securities Exchange Act of 1934 that suspends or revokes the registration of a security due to violations of disclosure or filing requirements."@en .
+
+
+###  http://www.sks.ai/ont/SecuritiesExchange
+<http://www.sks.ai/ont/SecuritiesExchange> rdf:type owl:Class ;
+                                           :authoratative_def "The term 'exchange' means any organization, association, or group of persons, whether incorporated or unincorporated, which constitutes, maintains, or provides a marketplace or facilities for bringing together purchasers and sellers of securities or for otherwise performing with respect to securities the functions commonly performed by a stock exchange as that term is generally understood."@en ;
+                                           <http://www.sks.ai/ont/sourceOfAuthoratativeDefinition> "15 U.S.C. § 78c(a)(1)" ;
+                                           rdfs:label "Securities Exchange"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Exchange"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An exchange is an organized market where agents buy and sell securities."@en .
 
 
 ###  https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H
