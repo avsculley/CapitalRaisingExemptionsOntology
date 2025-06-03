@@ -349,7 +349,7 @@
 
 ###  http://www.sks.ai/ont/NationalSecuritiesExchange
 <http://www.sks.ai/ont/NationalSecuritiesExchange> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
+                                                   rdfs:subClassOf <http://www.sks.ai/ont/SecuritiesExchange> ;
                                                    rdfs:label "National Securities Exchange"@en ;
                                                    <http://www.w3.org/2004/02/skos/core#definition> "A securities exchange registered with the SEC under Section 6 of the Securities Exchange Act of 1934, including NYSE, NASDAQ, and others, subject to federal regulatory oversight."@en .
 
@@ -365,6 +365,13 @@
 <http://www.sks.ai/ont/Section12jOrder> rdf:type owl:Class ;
                                         rdfs:label "Section 12(j) Order"@en ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "An SEC order issued under Section 12(j) of the Securities Exchange Act of 1934 that suspends or revokes the registration of a security due to violations of disclosure or filing requirements."@en .
+
+
+###  http://www.sks.ai/ont/SecuritiesExchange
+<http://www.sks.ai/ont/SecuritiesExchange> rdf:type owl:Class ;
+                                           rdfs:label "Securities Exchange"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Exchange"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An exchange is an organized market where agents buy and sell securities."@en .
 
 
 ###  https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H
