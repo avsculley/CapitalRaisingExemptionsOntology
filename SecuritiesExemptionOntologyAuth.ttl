@@ -236,7 +236,7 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Non-Accredited_Investor
 :Non-Accredited_Investor rdf:type owl:Class ;
-                         rdfs:subClassOf <https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> ;
+                         rdfs:subClassOf <http://www.sks.ai/ont/Investor> ;
                          rdfs:label "Non-Accredited Investor"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A Non-Accredited Investor is an Investor that does not meet any of the criteria defining an accredited investor."@en .
 
@@ -353,13 +353,6 @@
               <http://www.w3.org/2004/02/skos/core#definition> "A Solicitation is a communicative process in which an Issuer (or agent thereof) seeks to attract potential investors to purchase securities."@en .
 
 
-###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Sophisticated_Investor
-:Sophisticated_Investor rdf:type owl:Class ;
-                        rdfs:subClassOf <https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> ;
-                        rdfs:label "Sophisticated Investor"@en ;
-                        <http://www.w3.org/2004/02/skos/core#definition> "A Sophisticated Investor is an Investor possessing sufficient knowledge and experience to evaluate the risks and merits of an offering, but may not meet accredited thresholds."@en .
-
-
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/State_Limit
 :State_Limit rdf:type owl:Class ;
              rdfs:subClassOf :Offering_Limit ;
@@ -397,6 +390,13 @@
                                                  <http://www.w3.org/2004/02/skos/core#definition> "For purposes of intrastate offering exemptions, doing business typically includes having a principal office and a majority of employees or assets in the same state, or conducting a significant portion of revenue-generating activity there."@en .
 
 
+###  http://www.sks.ai/ont/Investor
+<http://www.sks.ai/ont/Investor> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
+                                 rdfs:label "Investor"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "An agent that allocates financial capital with the expectation of future returns."@en .
+
+
 ###  http://www.sks.ai/ont/NationalSecuritiesExchange
 <http://www.sks.ai/ont/NationalSecuritiesExchange> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://www.sks.ai/ont/SecuritiesExchange> ;
@@ -430,8 +430,8 @@
 
 ###  https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H
 <https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> rdf:type owl:Class ;
-                                                              rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> ;
-                                                              rdfs:label "Investor"@en ;
+                                                              rdfs:subClassOf <http://www.sks.ai/ont/Investor> ;
+                                                              rdfs:label "Sophisticated Investor"@en ;
                                                               <http://www.w3.org/2004/02/skos/core#definition> "An investor is a person, company or entity that qualifies under the Securities Act of 1933 and related Securities and Exchange Commission regulations as one having sufficient knowledge and expertise in financial matters to weigh the value and risks of an investment."@en .
 
 
@@ -452,7 +452,7 @@
 
 ###  https://folio.openlegalstandard.org/RCwEVoFW90PLN1eL6JToOMt
 <https://folio.openlegalstandard.org/RCwEVoFW90PLN1eL6JToOMt> rdf:type owl:Class ;
-                                                              rdfs:subClassOf <https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> ;
+                                                              rdfs:subClassOf <http://www.sks.ai/ont/Investor> ;
                                                               :authoratative_def "(i) Certain financial institutions (banks, insurance companies, investment companies, employee benefit plans under specific conditions) and (ii) any person who meets prescribed criteria regarding financial sophistication, net worth, knowledge, or assets under management, as defined by Commission rules." ;
                                                               rdfs:label "Accredited Investor"@en ;
                                                               <http://www.w3.org/2004/02/skos/core#definition> "Individuals or entities that meet certain requirements set by regulatory authorities, such as a specific net worth or income level."@en .

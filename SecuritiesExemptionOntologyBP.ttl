@@ -67,13 +67,15 @@
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/AccreditedInvestorRole
 :AccreditedInvestorRole rdf:type owl:Class ;
                         rdfs:subClassOf :Investor_Role ;
-                        rdfs:label "Accredited Investor Role"@en .
+                        rdfs:label "Accredited Investor Role"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "An investor role that inheres in an agent in virtue of that agent meeting certain requirements set by regulatory authorities."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Annual_Income
 :Annual_Income rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.sks.ai/ont/SumOfMoney> ;
                rdfs:label "Annual Income"@en ;
-               <http://www.w3.org/2004/02/skos/core#definition> "Annual income is the total amount of money earned or received by an individual or entity over the course of a year, typically including wages, salaries, bonuses, dividends, and other sources of revenue before taxes."@en .
+               <http://www.w3.org/2004/02/skos/core#definition> "The sum of money that an agent earns in a year."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Asset
@@ -101,7 +103,8 @@
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Bad_Actor_Role
 :Bad_Actor_Role rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
-                rdfs:label "Bad Actor Role"@en .
+                rdfs:label "Bad Actor Role"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A role that inheres in an agent in virtue of their being disqualified from certain securities exemptions due to specified regulatory, criminal, or civil violations, and, if realized, is realized in some act the agent is disqualified from because of their violations."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Blank_Check_Company
@@ -120,6 +123,10 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Canadian_Issuer
 :Canadian_Issuer rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                       owl:someValuesFrom <http://www.sks.ai/ont/CanadianIssuerRole>
+                                     ] ;
                  rdfs:subClassOf :Non-U.S._Issuer ;
                  rdfs:label "Canadian Issuer"@en ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A Canadian Issuer is a non-U.S. Issuer that is incorporated or based in Canada."@en .
@@ -127,14 +134,17 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Capital-Raising_Limit
 :Capital-Raising_Limit rdf:type owl:Class ;
-                       rdfs:label "Capital-Raising Limit"@en .
+                       rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> ;
+                       rdfs:label "Capital-Raising Limit"@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "A directive information content entity that prescribes the amount of capital an issuer is permitted to raise within a particular temporal interval."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/DisclosureDocumentContent
 :DisclosureDocumentContent rdf:type owl:Class ;
                            rdfs:subClassOf :LegalDocumentContent ;
                            owl:disjointWith :OfferingDocumentContent ;
-                           rdfs:label "Disclosure Document Content"@en .
+                           rdfs:label "Disclosure Document Content"@en ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "A Legal Document Content that is provided by an issuer in connection with a securities offering and is about the offering, the issuer, the risks involved, and other factors necessary to enable investors to make informed investment decisions."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Disclosure_Document
@@ -162,7 +172,8 @@
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Federal_Limit
 :Federal_Limit rdf:type owl:Class ;
                rdfs:subClassOf :Offering_Limit ;
-               rdfs:label "Federal Offering Limit"@en .
+               rdfs:label "Federal Offering Limit"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "An offering limit prescribed by federal law."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Form_C
@@ -181,6 +192,10 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/In-State_Resident
 :In-State_Resident rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                         owl:someValuesFrom <http://www.sks.ai/ont/InStateResidentRole>
+                                       ] ;
                    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001017> ;
                    rdfs:label "In-State Resident"@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "An In-state Resident is a person or organization that is legally domiciled or primarily located in a particular state, often relevant for intrastate offerings."@en .
@@ -188,8 +203,9 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Internet_Platform
 :Internet_Platform rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
                    rdfs:label "Internet Platform"@en ;
-                   <http://www.w3.org/2004/02/skos/core#definition> "An internet platform is a digital ecosystem or service accessible online that enables users to interact, exchange information, and conduct transactions through provided tools and applications."@en .
+                   <http://www.w3.org/2004/02/skos/core#definition> "A generically dependent continuant that is a digital system or service that facilitates interactions, transactions, or content sharing between users or between users and applications, typically by providing a structured environment built on internet protocols."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Investment_Company
@@ -202,25 +218,33 @@
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Investment_Limit
 :Investment_Limit rdf:type owl:Class ;
                   rdfs:subClassOf :Capital-Raising_Limit ;
-                  rdfs:label "Investment Limit"@en .
+                  rdfs:label "Investment Limit"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "A capital-raising limit that prescribes the amount of capital that a single investor is permitted to contribute to an offering."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Investor_Role
 :Investor_Role rdf:type owl:Class ;
                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
-               rdfs:label "Investor Role"@en .
+               rdfs:label "Investor Role"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A role that inheres in an agent in virtue of that agent allocating financial capital with the expectation of future returns, and, if realized, is realized in an act of investment."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Issuer_Role
 :Issuer_Role rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
-             rdfs:label "Issuer Role"@en .
+             rdfs:label "Issuer Role"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A role that inheres in an agent in virtue of developing, registering, and selling securities to finance its operations, and, if realized, is realized  in an act of issuing securities."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/LegalDocumentContent
 :LegalDocumentContent rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000084> ;
+                                            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00001346>
+                                          ] ;
                       rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
-                      rdfs:label "Legal Document Content"@en .
+                      rdfs:label "Legal Document Content"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "Information content entity that generically depends on some legal instrument."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Legal_Document
@@ -240,8 +264,9 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Net_Worth
 :Net_Worth rdf:type owl:Class ;
+           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001364> ;
            rdfs:label "Net Worth"@en ;
-           <http://www.w3.org/2004/02/skos/core#definition> "Net worth is defined as the total value of an individual’s or entity’s assets minus their total liabilities, representing their overall financial position or wealth."@en .
+           <http://www.w3.org/2004/02/skos/core#definition> "An interval measurement information content entity that measures the value of an agent's assets minus that agent's liabilities."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Non-Accredited_Investor
@@ -264,6 +289,10 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Non-U.S._Issuer
 :Non-U.S._Issuer rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                       owl:someValuesFrom <http://www.sks.ai/ont/NonUSIssuerRole>
+                                     ] ;
                  rdfs:subClassOf <https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> ;
                  rdfs:label "Non-U.S. Issuer"@en ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A non-U.S. Issuer is an Issuer that is organized or primarily based outside the United States."@en .
@@ -287,21 +316,22 @@
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Offeree_Role
 :Offeree_Role rdf:type owl:Class ;
               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
-              rdfs:label "Offeree Role"@en .
+              rdfs:label "Offeree Role"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "A role that inheres in an Aqgent in virtue of that agent being extended an offer to purchase securities, and, if realized, is realized in in an act of  being offered an opprotunity to purchase securities."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/OfferingDocumentContent
 :OfferingDocumentContent rdf:type owl:Class ;
                          rdfs:subClassOf :LegalDocumentContent ;
                          rdfs:label "Offering Document Content"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "An Offering Document is a comprehensive legal document provided by a company or financial entity to potential investors, detailing the terms, conditions, and risks of the investment offering. This document, often used in private placements and public offerings, includes key information such as the company's business model, financial statements, management background, and details of the security being offered."@en .
+                         <http://www.w3.org/2004/02/skos/core#definition> "A legal document content provided by a company or financial entity to potential investors, detailing the terms, conditions, and risks of the investment offering."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Offering_Limit
 :Offering_Limit rdf:type owl:Class ;
                 rdfs:subClassOf :Capital-Raising_Limit ;
                 rdfs:label "Offering Limit"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "An Offering Limit is a regulatory cap on the total amount of capital that can be raised under a particular exemption within a specified timeframe."@en .
+                <http://www.w3.org/2004/02/skos/core#definition> "A capital-raisinf limit that prescribes the amount of capital that an issuer can raise within a particular temporal interval."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Process_of_Issuing_Securities
@@ -358,7 +388,8 @@
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Registered_Intermediary_Role
 :Registered_Intermediary_Role rdf:type owl:Class ;
                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
-                              rdfs:label "Registered Intermediary Role"@en .
+                              rdfs:label "Registered Intermediary Role"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "A role that inheres in an agent in virtue of that agent being formally registered with a regulatory authority to act as a trusted agent between parties in financial transactions, ensuring compliance with applicable laws and regulations, and, if realized, is realized in an act of the correlated type."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Registered_Investment_Company
@@ -388,6 +419,10 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Sophisticated_Investor
 :Sophisticated_Investor rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                              owl:someValuesFrom <http://www.sks.ai/ont/SophisticatedInvestorRole>
+                                            ] ;
                         rdfs:subClassOf <https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> ;
                         rdfs:label "Sophisticated Investor"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A Sophisticated Investor is an Investor possessing sufficient knowledge and experience to evaluate the risks and merits of an offering, but may not meet accredited thresholds."@en .
@@ -396,7 +431,8 @@
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/State_Limit
 :State_Limit rdf:type owl:Class ;
              rdfs:subClassOf :Offering_Limit ;
-             rdfs:label "State Offering Limit"@en .
+             rdfs:label "State Offering Limit"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "An offering limit prescribed by state law."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Time_Period
@@ -408,9 +444,162 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/U.S._Issuer
 :U.S._Issuer rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                   owl:someValuesFrom <http://www.sks.ai/ont/USIssuerRole>
+                                 ] ;
              rdfs:subClassOf <https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> ;
              rdfs:label "U.S. Issuer"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "A U.S. Issuer is an Issuer that is organized or maintains its principal place of business in the United States."@en .
+
+
+###  http://www.sks.ai/ont/ActOfInStateBusiness
+<http://www.sks.ai/ont/ActOfInStateBusiness> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> ;
+                                             rdfs:label "Act of In-state Business"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "An act of business that occurs in some state and has agent some incorporated organization that either: (i) has a principal office and majority of employees or assets in that state; (ii) condusts a significant portion of revenue-generating activity in that state."@en .
+
+
+###  http://www.sks.ai/ont/CanadianIssuerRole
+<http://www.sks.ai/ont/CanadianIssuerRole> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.sks.ai/ont/NonUSIssuerRole> ;
+                                           rdfs:label "Canadian Issuer Role"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A non-US issuer role that inheres in an agent in virtue of that agent being organized in, or maintaining its principal place of business in, Canada.en"@en .
+
+
+###  http://www.sks.ai/ont/DisclosureDocument
+<http://www.sks.ai/ont/DisclosureDocument> rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                                 owl:someValuesFrom :DisclosureDocumentContent
+                                                               ] ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001346> ;
+                                           rdfs:label "Disclosure Document"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A legal instrument that carries some disclosure document content."@en .
+
+
+###  http://www.sks.ai/ont/FormC
+<http://www.sks.ai/ont/FormC> rdf:type owl:Class ;
+                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                    owl:someValuesFrom <http://www.sks.ai/ont/FormCContent>
+                                                  ] ;
+                              rdfs:subClassOf <http://www.sks.ai/ont/DisclosureDocument> ;
+                              rdfs:label "Form C"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "A disclosure document that carries some Form C content."@en .
+
+
+###  http://www.sks.ai/ont/FormCContent
+<http://www.sks.ai/ont/FormCContent> rdf:type owl:Class ;
+                                     rdfs:subClassOf :DisclosureDocumentContent ;
+                                     rdfs:label "Form C Content"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "A disclosure document content that an issuer must file with the SEC when conducting a securities offering under Regulation Crowdfunding, detailing the company’s business, financial condition, offering specifics, and intended use of proceeds to inform potential investors."@en .
+
+
+###  http://www.sks.ai/ont/FormD
+<http://www.sks.ai/ont/FormD> rdf:type owl:Class ;
+                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                    owl:someValuesFrom <http://www.sks.ai/ont/FormDContent>
+                                                  ] ;
+                              rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001346> ;
+                              rdfs:label "Form D"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "A legal instrument that carries some Form D Content."@en .
+
+
+###  http://www.sks.ai/ont/FormDContent
+<http://www.sks.ai/ont/FormDContent> rdf:type owl:Class ;
+                                     rdfs:subClassOf :LegalDocumentContent ;
+                                     rdfs:label "Form D Content"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "A legal document content that companies must file with the SEC after they sell securities without registration under Regulation D, containing key details about the offering and issuer."@en .
+
+
+###  http://www.sks.ai/ont/InStateResidentRole
+<http://www.sks.ai/ont/InStateResidentRole> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                            rdfs:label "In-state Resident Role"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "A role that inheres in an agent in virtue of that agent being legally domiciled or primarily located in a particular state."@en .
+
+
+###  http://www.sks.ai/ont/NationalSecuritiesExchangeMarketplace
+<http://www.sks.ai/ont/NationalSecuritiesExchangeMarketplace> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.sks.ai/ont/SecuritiesExchangeMarketplace> ;
+                                                              rdfs:label "National Securities Exchange Marketplace"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "A securities exchange marketplace registered with the SEC under Section 6 of the Securities Exchange Act of 1934."@en .
+
+
+###  http://www.sks.ai/ont/NationalSecuritiesExchangeOrganization
+<http://www.sks.ai/ont/NationalSecuritiesExchangeOrganization> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.sks.ai/ont/SecuritiesExchangeOrganization> ;
+                                                               rdfs:label "National Securities Exchange Organization"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "An organization that, in part or in full, operates, or assists in operating, a national securities exchange marketplace."@en .
+
+
+###  http://www.sks.ai/ont/NonUSIssuerRole
+<http://www.sks.ai/ont/NonUSIssuerRole> rdf:type owl:Class ;
+                                        rdfs:subClassOf :Issuer_Role ;
+                                        rdfs:label "Non-US Issuer Role"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "An issuer role that inheres in an agent in virtue of that agent being organized outside of, or maintaining its principal place of business outside of, the United States."@en .
+
+
+###  http://www.sks.ai/ont/OfferingDocument
+<http://www.sks.ai/ont/OfferingDocument> rdf:type owl:Class ;
+                                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                               owl:someValuesFrom :OfferingDocumentContent
+                                                             ] ;
+                                         rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001346> ;
+                                         rdfs:label "Offering Document"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> "A legal instrument that carries some offering document content."@en .
+
+
+###  http://www.sks.ai/ont/RestrictedSecurity
+<http://www.sks.ai/ont/RestrictedSecurity> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Security ;
+                                           rdfs:label "Restricted Security"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A security aquired from an issuer during an act of transacting that does not have a public offering as a process part or as a cause."@en .
+
+
+###  http://www.sks.ai/ont/Section12jOrderContent
+<http://www.sks.ai/ont/Section12jOrderContent> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> ;
+                                               rdfs:label "Section 12(j) Order Content"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "A Directive Information Content Entity that suspends or revokes the registration of a security due to violations of disclosure or filing requirements, and is issued under section 12(j) of the Excurities Exchange Act of 1934."@en .
+
+
+###  http://www.sks.ai/ont/SecuritiesExchangeMarketplace
+<http://www.sks.ai/ont/SecuritiesExchangeMarketplace> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                                      rdfs:label "Securities Exchange Marketplace"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "A marketplace where agents buy and sell securities."@en .
+
+
+###  http://www.sks.ai/ont/SecuritiesExchangeOrganization
+<http://www.sks.ai/ont/SecuritiesExchangeOrganization> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001180> ;
+                                                       rdfs:label "Securities Exchange Organization"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "An organization that, in part or in full, operates, or assists in operating, a securities exchange marketplace."@en .
+
+
+###  http://www.sks.ai/ont/SophisticatedInvestorRole
+<http://www.sks.ai/ont/SophisticatedInvestorRole> rdf:type owl:Class ;
+                                                  rdfs:subClassOf :Investor_Role ;
+                                                  rdfs:label "Sophisticated Investor Role"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "An investor role that inheres in an agent in virtue of qualifying under the Securities Act of 1933 and related Securities and Exchange Commission regulations as having sufficient knowledge and expertise in financial matters to weigh the value and risks of an investment."@en .
+
+
+###  http://www.sks.ai/ont/SumOfMoney
+<http://www.sks.ai/ont/SumOfMoney> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000740> ;
+                                   rdfs:label "Sum of Money"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "A resource that is a collection of digital or physical money."@en .
+
+
+###  http://www.sks.ai/ont/USIssuerRole
+<http://www.sks.ai/ont/USIssuerRole> rdf:type owl:Class ;
+                                     rdfs:subClassOf :Issuer_Role ;
+                                     rdfs:label "US Issuer Role"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "An issuer role that inheres in an agent in virtue of that agent being organized in, or maintaining its principal place of business in, the United States."@en .
 
 
 ###  https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H
