@@ -129,7 +129,7 @@
                                      ] ;
                  rdfs:subClassOf :Non-U.S._Issuer ;
                  rdfs:label "Canadian Issuer"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "A Canadian Issuer is a non-U.S. Issuer that is incorporated or based in Canada."@en .
+                 <http://www.w3.org/2004/02/skos/core#definition> "A non-US issuer that is bearer of some Canadian issuer role."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Capital-Raising_Limit
@@ -198,7 +198,7 @@
                                        ] ;
                    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001017> ;
                    rdfs:label "In-State Resident"@en ;
-                   <http://www.w3.org/2004/02/skos/core#definition> "An In-state Resident is a person or organization that is legally domiciled or primarily located in a particular state, often relevant for intrastate offerings."@en .
+                   <http://www.w3.org/2004/02/skos/core#definition> "An agent that is bearer of some in-state resident role."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Internet_Platform
@@ -295,7 +295,7 @@
                                      ] ;
                  rdfs:subClassOf <https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> ;
                  rdfs:label "Non-U.S. Issuer"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "A non-U.S. Issuer is an Issuer that is organized or primarily based outside the United States."@en .
+                 <http://www.w3.org/2004/02/skos/core#definition> "An issuer that is bearer of some non-US issuer role."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Offeree
@@ -310,7 +310,7 @@
                              ] ;
          rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001017> ;
          rdfs:label "Offeree"@en ;
-         <http://www.w3.org/2004/02/skos/core#definition> "An Offeree is a prospective investor to whom an Issuer extends an offer to purchase securities."@en .
+         <http://www.w3.org/2004/02/skos/core#definition> "An agent that is bearer of some offeree role."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Offeree_Role
@@ -350,7 +350,7 @@
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Process_of_Transaction
 :Process_of_Transaction rdf:type owl:Class ;
-                        rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> ;
+                        rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000433> ;
                         rdfs:label "Act of Transacting"@en ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A planned act in which agents exchange entities of economic value."@en .
 
@@ -382,7 +382,7 @@
                                              ] ;
                          rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001017> ;
                          rdfs:label "Registered Intermediary"@en ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "A registered intermediary is an individual or firm that has been formally registered with a regulatory authority to act as a trusted agent between parties—such as issuers and investors—in financial transactions, ensuring compliance with applicable laws and regulations."@en .
+                         <http://www.w3.org/2004/02/skos/core#definition> "An agent that is bearer of some registered intermediary role."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/Registered_Intermediary_Role
@@ -425,7 +425,7 @@
                                             ] ;
                         rdfs:subClassOf <https://folio.openlegalstandard.org/R8hWq9dSn0Su2Y59JE48V3H> ;
                         rdfs:label "Sophisticated Investor"@en ;
-                        <http://www.w3.org/2004/02/skos/core#definition> "A Sophisticated Investor is an Investor possessing sufficient knowledge and experience to evaluate the risks and merits of an offering, but may not meet accredited thresholds."@en .
+                        <http://www.w3.org/2004/02/skos/core#definition> "An agent that is bearer of some sophisticated investor role."@en .
 
 
 ###  http://www.semanticweb.org/alecsculley/ontologies/2025/3/untitled-ontology-113/State_Limit
@@ -450,12 +450,19 @@
                                  ] ;
              rdfs:subClassOf <https://folio.openlegalstandard.org/RDM4k8t0O3hy93vQwQzEcpg> ;
              rdfs:label "U.S. Issuer"@en ;
-             <http://www.w3.org/2004/02/skos/core#definition> "A U.S. Issuer is an Issuer that is organized or maintains its principal place of business in the United States."@en .
+             <http://www.w3.org/2004/02/skos/core#definition> "An issuer that is bearer of some US issuer role."@en .
+
+
+###  http://www.sks.ai/ont/ActOfBusiness
+<http://www.sks.ai/ont/ActOfBusiness> rdf:type owl:Class ;
+                                      rdfs:subClassOf :Process_of_Transaction ;
+                                      rdfs:label "Act of Business"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "An act of transacting that has agent some incorporated organization and is done to make profit."@en .
 
 
 ###  http://www.sks.ai/ont/ActOfInStateBusiness
 <http://www.sks.ai/ont/ActOfInStateBusiness> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> ;
+                                             rdfs:subClassOf <http://www.sks.ai/ont/ActOfBusiness> ;
                                              rdfs:label "Act of In-state Business"@en ;
                                              <http://www.w3.org/2004/02/skos/core#definition> "An act of business that occurs in some state and has agent some incorporated organization that either: (i) has a principal office and majority of employees or assets in that state; (ii) condusts a significant portion of revenue-generating activity in that state."@en .
 
